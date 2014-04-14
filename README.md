@@ -8,16 +8,31 @@ Network search makes operational data available in real-time to management appli
 * ZeroMQ 3.2.4
 
 
-1. Move NetworkSeach dir to /opt
+1 Move NetworkSeach dir to /opt
 ```
 cp -rf NetworkSeach /opt
 ```
-2. Install dependency
+2 Install dependency
 ```
+#You need to execute follow as root user
 #if you use ubuntu
 ./install-ubuntu
 #if you use Centos
 ./install-centos
 ```
+3 Start Network Search
+```
+./opt/NetworkSearch/start_network_search
+```
+Stop Network Search
+```
+./opt/NetworkSearch/stop_network_search
+```
+Restart Network Search
+```
+./opt/NetworkSearch/reset_ns
+```
+
+You can access http://localhost:8080/
 
 ## License
