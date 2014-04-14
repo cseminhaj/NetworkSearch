@@ -1,0 +1,117 @@
+
+.white {
+    color: white;
+}
+
+.config-btn{
+	cursor:pointer;
+	padding: 10px 16px;
+	font-size: 25px;
+	line-height: 1.33;
+	border-radius: 6px;
+}
+
+.detail-of-content{
+	font-weight:normal;
+	color:#555;
+}
+
+.dropdown-menu{
+	right:0;
+	padding:0 20px 20px 20px;
+}
+
+#config_btn{
+	float:right;
+
+
+}
+
+
+.navbar-header{
+	width:200px;
+	display: block;
+	float:left;
+
+}
+
+.navbar{
+	display:block;
+
+}
+
+
+#queryResults ul{
+	margin:0;
+	padding:0 0 0 10px;
+
+}
+
+#queryResults ul li{
+	list-style: none;
+	margin: 0 0 23px 0;
+
+}	
+
+#queryResults .detail-of-content{
+	margin:0 0 0 2px;
+}
+
+
+#queryMeta{
+	margin:0 0 0 10px;
+	color: #999;
+	font-size: 13px;
+	line-height: 35px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+input.query_matching_param{
+	margin:0 0 0 20px;
+}
+
+
+label.object_type {
+	color: rgb(0, 0, 128);
+	margin-left: 10px;
+}
+
+label.object_name {
+	color: rgb(0, 0, 128);
+	margin-left: 0px;
+/*    text-decoration:none;
+    text-decoration:underline;*/
+    cursor: pointer;
+/*    color: blue;*/
+}
+
+label.rank {
+	color: MediumSeaGreen;
+	margin-left: 10px;
+}
+
+
+.objectBox h4{
+	margin:5px 0 0 0;
+	cursor: pointer;
+}
+
+.highlight-on{
+    background-color:#FFFF00;
+}
+
+#option-space{
+    margin: 0 0 20px 0;
+}
+
+.black{
+    color:#000;
+}
+#loadingDisplay img{
+	margin:100px auto;
+	height:30px;
+	width:30px;
+	display:block;
+}

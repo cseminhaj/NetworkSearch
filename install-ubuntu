@@ -1,0 +1,93 @@
+#!/bin/bash
+# This is a installer for installing required packages
+
+# possibly need to apt-get install subversion
+
+# File to run installation of the cloud search system
+echo "Do you want to install all dependency? [Y/n] > "
+read all
+lib = "n"
+
+if [ "$all" != "Y" ];then
+    echo "Install Python?[Y/n] > "
+    read lib
+fi
+if [ "$all" != "Y" ] || [ "$lib" = "Y" ] ; then
+    sudo apt-get -y install python-pip python-dev
+    sudo pip install pip --upgrade
+fi
+
+
+if [ "$all" != "Y" ];then
+    echo "Install ZeroMQ?[Y/n] > "
+    read lib
+fi
+if [ "$all" != "Y" ] || [ "$lib" = "Y" ] ; then
+    sudo apt-get -y install build-essential uuid-dev libtool autoconf automake
+    mkdir "libs"
+    pushd libs
+    wget http://download.zeromq.org/zeromq-3.2.4.tar.gz
+    tar -zxvf zeromq-3.2.4.tar.gz
+    pushd "zeromq-3.2.4"
+    ./configure
+    make
+    sudo make install
+    sudo ldconfig
+    popd
+    popd
+    rm -rf "libs"
+fi
+
+
+if [ "$all" != "Y" ];then
+    echo "Install Mongodb?[Y/n] "
+    read lib
+fi
+
+if [ "$all" != "Y" ] || [ "$lib" = "Y" ] ; then
+    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+    echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
+    sudo apt-get update
+    sudo apt-get -y install mongodb-10gen
+fi
+
+if [ "$all" != "Y" ];then
+    echo "Install pymongo?[Y/n] > "
+    read lib
+fi
+if [ "$all" != "Y" ] || [ "$lib" = "Y" ] ; then
+    sudo pip install pymongo
+fi
+
+if [ "$all" != "Y" ];then
+    echo "Install pyzmq?[Y/n] > "
+    read lib
+fi
+if [ "$all" != "Y" ] || [ "$lib" = "Y" ] ; then
+    sudo pip install pyzmq
+fi
+
+
+if [ "$all" != "Y" ];then
+    echo "Install bottle?[Y/n] > "
+    read lib
+fi
+if [ "$all" != "Y" ] || [ "$lib" = "Y" ] ; then
+    sudo pip install bottle
+fi
+
+if [ "$all" != "Y" ];then
+    echo "Install tornado?[Y/n] > "
+    read lib
+fi
+if [ "$all" != "Y" ] || [ "$lib" = "Y" ] ; then
+    sudo pip install tornado
+fi
+
+echo ""
+echo "creating a default config.cfg file ..."
+pushd "NetworkSearch2"
+cp configTemplate.cfg config.cfg
+popd
+echo "Installation completed."
+echo "Note : please configure the NetworkSearch2/config.cfg file before run a search node"

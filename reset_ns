@@ -1,0 +1,5 @@
+#!/bin/bash
+
+./stop_network_search
+./clean_logs
+./start_network_search

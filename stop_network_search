@@ -1,0 +1,33 @@
+#!/bin/bash
+#NetworkSearch.sh $@
+
+# get current working directory
+_pwd=`pwd`
+
+# export the python path
+export PYTHONPATH=$_pwd
+python_args="stop"
+
+echo "stop Query processing module..."
+python "$_pwd/NetworkSearch2/manager.py" $python_args &
+sleep 1
+
+echo "stop Indexing module..."
+python "$_pwd/NetworkSearch2/IndexingSubsystem/indexManager.py" $python_args  &
+sleep 1
+
+echo "stop Sensor module..."
+#sudo env PYTHONPATH=$_pwd 
+python "$_pwd/NetworkSearch2/SensorSubsystem/sensorManager.py" $python_args  &
+sleep 1
+
+echo "stop web module..."
+nohup python "$_pwd/NetworkSearch2/web/web_server.py" $python_args  &
+sleep 1
+
+#echo "stop node distance module..."
+#nohup python "$_pwd/NetworkSearch2/nodes.py" $python_args  &
+#sleep 1
+
+echo "Done"
+

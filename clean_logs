@@ -1,0 +1,10 @@
+#!/bin/bash
+
+rm ./NetworkSearch2/NetworkSearch2.log
+rm ./nohup.out
+rm ./NetworkSearch2/IndexingSubsystem/IndexManager.log
+rm ./NetworkSearch2/SensorSubsystem/SensorManager2.log
+#rm ./UnifiedInterface.log
+#rm ./Interpreter.log
+#rm ./Executor.log
+#rm ./EchoProcess.log

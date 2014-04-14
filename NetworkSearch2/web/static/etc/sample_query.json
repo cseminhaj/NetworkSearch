@@ -1,0 +1,12 @@
+{
+"query":[
+	"garbage 250 tasman",
+	"available parking",
+	"available parking 2 minutes",
+	"available parking 2 minutes drive",
+	"cisco",
+	"line protocol down",
+	"192.168.0.4",
+	"192.168.0.4 192.168.0.1"
+]
+}
