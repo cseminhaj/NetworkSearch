@@ -1,6 +1,5 @@
 # Network Search
-
-
+Network search makes operational data available in real-time to management applications. In contrast to traditional monitoring, neither the data location nor the data format needs to be known to the invoking process, which simplifies application development, but requires an efficient search plane inside the managed system. The search plane is realized as a network of search nodes that process search queries in a distributed fashion. This presentation focuses on the design of a search node, which maintains a real-time database of operational information and allows for parallel processing of search queries.
 
 ### How to install
 ##### Requirement
@@ -20,6 +19,3 @@ cp -rf NetworkSeach /opt
 #if you use Centos
 ./install-centos
 ```
-
-
-###Dependecy 
