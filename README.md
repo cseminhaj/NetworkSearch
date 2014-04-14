@@ -19,3 +19,5 @@ cp -rf NetworkSeach /opt
 #if you use Centos
 ./install-centos
 ```
+
+## License
