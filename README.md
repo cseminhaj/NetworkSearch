@@ -24,7 +24,7 @@ cp -rf NetworkSeach /opt
 
 ```
 [Echo_protocol]
-# input neighbors ips with ,
+# input neighbors IP or hostname with ,
 neighbor_list = 
 # input your host ip
 hostname = localhost
