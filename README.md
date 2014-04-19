@@ -20,7 +20,20 @@ cp -rf NetworkSeach /opt
 #if you use Centos
 ./install-centos
 ```
-3 Start Network Search
+3 Configure the config.cfg
+
+```
+[Echo_protocol]
+# input neighbors ips with ,
+neighbor_list = 
+# input your host ip
+hostname = localhost
+message_list_capped = 10000
+n_process = 1
+capped_return = 100
+```
+
+4 Start Network Search
 ```
 ./opt/NetworkSearch/start_network_search
 ```
