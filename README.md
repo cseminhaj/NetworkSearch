@@ -20,7 +20,7 @@ cp -rf NetworkSeach /opt
 #if you use Centos
 ./install-centos
 ```
-3 Configure the config.cfg
+3 Configure NetworkSearch2/config.cfg
 
 ```
 [Echo_protocol]
